@@ -39,21 +39,21 @@ public class MainActivity extends AppCompatActivity {
         btnOK = (Button) findViewById(R.id.BtnOK);
         imgPet = (ImageView) findViewById(R.id.ImgPet);
 
-        // 동의함 체크박스의 체크가 변경되면
+        // 시작함 체크박스의 체크가 변경되면
         chkAgree.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
-                // 체크되면 모두 보이도록 설정
-                if (chkAgree.isChecked() == true) {
-                    text2.setVisibility(android.view.View.VISIBLE);
-                    rGroup1.setVisibility(android.view.View.VISIBLE);
-                    btnOK.setVisibility(android.view.View.VISIBLE);
-                    imgPet.setVisibility(android.view.View.VISIBLE);
-                } else {
-                    text2.setVisibility(android.view.View.INVISIBLE);
-                    rGroup1.setVisibility(android.view.View.INVISIBLE);
-                    btnOK.setVisibility(android.view.View.INVISIBLE);
-                    imgPet.setVisibility(android.view.View.INVISIBLE);
-                }
+            // 체크되면 모두 보이도록 설정
+            if (chkAgree.isChecked() == true) {
+                text2.setVisibility(android.view.View.VISIBLE);
+                rGroup1.setVisibility(android.view.View.VISIBLE);
+                btnOK.setVisibility(android.view.View.VISIBLE);
+                imgPet.setVisibility(android.view.View.VISIBLE);
+            } else {
+                text2.setVisibility(android.view.View.INVISIBLE);
+                rGroup1.setVisibility(android.view.View.INVISIBLE);
+                btnOK.setVisibility(android.view.View.INVISIBLE);
+                imgPet.setVisibility(android.view.View.INVISIBLE);
+            }
             }
         });
 
@@ -61,20 +61,20 @@ public class MainActivity extends AppCompatActivity {
         btnOK.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
-                switch (rGroup1.getCheckedRadioButtonId()) {
-                    case R.id.RdoDog:
-                        imgPet.setImageResource(R.drawable.dog);
-                        break;
-                    case R.id.RdoCat:
-                        imgPet.setImageResource(R.drawable.cat);
-                        break;
-                    case R.id.RdoRabbit:
-                        imgPet.setImageResource(R.drawable.rabbit);
-                        break;
-                    default:
-                        Toast.makeText(getApplicationContext(), "동물 먼저 선택하세요", Toast.LENGTH_SHORT)
-                                .show();
-                }
+            switch (rGroup1.getCheckedRadioButtonId()) {
+                case R.id.RdoDog:
+                    imgPet.setImageResource(R.drawable.dog);
+                    break;
+                case R.id.RdoCat:
+                    imgPet.setImageResource(R.drawable.cat);
+                    break;
+                case R.id.RdoRabbit:
+                    imgPet.setImageResource(R.drawable.rabbit);
+                    break;
+                default:
+                    Toast.makeText(getApplicationContext(), "동물 먼저 선택하세요", Toast.LENGTH_SHORT)
+                            .show();
+            }
             }
         });
 

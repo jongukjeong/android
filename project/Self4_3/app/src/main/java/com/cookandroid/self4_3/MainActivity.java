@@ -35,34 +35,34 @@ public class MainActivity extends AppCompatActivity {
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                num1 = edit1.getText().toString();
-                num2 = edit2.getText().toString();
-                // num1이나 num2가 비어 있다면
-                if (num1.trim().equals("") || num2.trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), "입력 값이 비었습니다", Toast.LENGTH_SHORT)
-                            .show();
-                } else {
-                    result = Double.parseDouble(num1)
-                            + Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
-                }
+            num1 = edit1.getText().toString();
+            num2 = edit2.getText().toString();
+            // num1이나 num2가 비어 있다면
+            if (num1.trim().equals("") || num2.trim().equals("")) {
+                Toast.makeText(getApplicationContext(), "입력 값이 비었습니다", Toast.LENGTH_SHORT)
+                        .show();
+            } else {
+                result = Double.parseDouble(num1)
+                        + Double.parseDouble(num2);
+                textResult.setText("계산 결과 : " + result.toString());
+            }
             }
         });
 
         btnSub.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                num1 = edit1.getText().toString();
-                num2 = edit2.getText().toString();
+            num1 = edit1.getText().toString();
+            num2 = edit2.getText().toString();
 
-                // num1이나 num2가 비어 있다면
-                if (num1.trim().equals("") || num2.trim().equals("")) {
-                    Toast.makeText(getApplicationContext(), "입력 값이 비었습니다", Toast.LENGTH_SHORT)
-                            .show();
-                } else {
-                    result = Double.parseDouble(num1)
-                            - Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
-                }
+            // num1이나 num2가 비어 있다면
+            if (num1.trim().equals("") || num2.trim().equals("")) {
+                Toast.makeText(getApplicationContext(), "입력 값이 비었습니다", Toast.LENGTH_SHORT)
+                        .show();
+            } else {
+                result = Double.parseDouble(num1)
+                        - Double.parseDouble(num2);
+                textResult.setText("계산 결과 : " + result.toString());
+            }
 
             }
         });
